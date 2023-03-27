@@ -10,11 +10,24 @@ let btnPn = document.querySelector('#btn-Pn');
 let btnPoint = document.querySelector('#btnPoint');
 let btnEquls = document.querySelector('#btn-Equls');
 
+
+
 let setPoint = false;
 let number1, number2, result;
 let op = "";
 let setResult = false;
 let btnNumbers = document.querySelectorAll('.btn-number');
+
+
+
+btnClear.addEventListener('click',(e) => {
+    display.textContent = "0.0";
+    setPoint = false;
+    setResult = false;
+    number1 = 0;
+    number2 = 0;
+});
+
 
 
 btnPoint.addEventListener('click',(e) =>{
@@ -24,17 +37,10 @@ btnPoint.addEventListener('click',(e) =>{
     }
 });
 
+
+
 btnPn.addEventListener('click',(e) => {
     display.textContent = display.textContent * -1;
-});
-
-
-btnClear.addEventListener('click',(e) => {
-    display.textContent = "0.0";
-    setPoint = false;
-    setResult = false;
-    number1 = 0;
-    number2 = 0;
 });
 
 
@@ -73,9 +79,11 @@ btnPlus.addEventListener('click',(e) =>{
 });
 
 
+
 btnClearLastAction.addEventListener('click',(e) =>{
     display.textContent = 0.0;
 })
+
 
 
 btnEquls.addEventListener('click',(e) => {
@@ -102,17 +110,23 @@ btnEquls.addEventListener('click',(e) => {
     setResult = true;
 });
 
+
+
 btnMinus.addEventListener('click',(e) =>{
     number1 = number(display.textContent);
     display.textContent = "0.0";
     op ="-";
 });
 
+
+
 btnDiv.addEventListener('click',(e) =>{
     number1 = number(display.textContent);
     display.textContent = "0.0";
     op ="/";
 });
+
+
 
 btnMul.addEventListener('click',(e) =>{
     number1 = number(display.textContent);
